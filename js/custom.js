@@ -7,13 +7,14 @@ $(document).ready(function(){
   {
   
   $('.filter').show('1000');
+  $('.filter').children("a").attr('data-fancybox','all');
   }
   else
   {
   
   $(".filter").not('.'+value).hide('3000');
   $('.filter').filter('.'+value).show('3000');
-  
+  $('.filter').filter('.'+value).children("a").attr('data-fancybox',value);
   }
   });
   
